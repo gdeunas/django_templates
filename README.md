@@ -36,7 +36,7 @@ python manage.py runserver
 ## Главный адрес
 
 ````
-http://127.0.0.1:8000/catalog/home/
+http://127.0.0.1:8000/catalog/
 ````
 
 или

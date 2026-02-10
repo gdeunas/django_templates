@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'catalog/base.html' %}
 
-</body>
-</html>
+{% block title %}Детали продукта{% endblock %}
+
+{% block content %}
+{% include 'catalog/mainmenu.html' %}
+{% include 'catalog/header.html' %}
+<h2>Детали продукта</h2>
+<p>Название: <b>{{product.name}}</b></p>
+<p>Описание: <b>{{product.description}}</b></p>
+<p>Категория: <b>{{product.category}}</b></p>
+<p>Фотография:
+    <img class="img-article-left" src="{{product.image.url}}" alt="{{product.name}}" width="200">
+</p>
+<p>Цена: <b>{{product.price}} руб.</b></p>
+<p>Дата последнего изменения: <b>{{product.updated_at|date:"d M Y"}}</b></p>
+<a href="/products_list/"><< Назад</a>
+{% endblock %}
